@@ -1,0 +1,167 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: gray;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+li{
+  list-style: none;
+}
+
+.navigation{
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation img{
+  width: 30px;
+  padding-right:5px ;
+}
+.navigation .logo{
+  display: flex;
+  align-items: center;
+}
+.list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item__list a{
+  padding: 20px;
+}
+.navigation .btn{
+  padding: 8px 18px;
+  background-color: #62EA5F;
+  color: white;
+  border-radius: 20px;
+}
+/* Hero */
+.hero{
+  border: 1px solid blue;
+}
+.top{
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top img{
+  width: 25%;
+}
+.top .left, .top .right{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.right span{
+  transform: rotateZ(90deg);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.bottom {
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+}
+.bottom h1{
+  font-size: 100px;
+  margin-bottom: 0;
+  text-align: center;
+}
+.bottom span{
+  font-size: 25px;
+  text-align: center;
+}
+
+/* About */
+.about{
+  border: 1px solid black;
+  display: flex;
+}
+.tiktik{
+  width: 130px;
+}
+.tiktik:nth-child(1){
+  align-self: flex-start;
+}
+.tiktik:nth-child(2){
+  align-self: flex-end;
+}
+.left{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.rigth{
+  width: 40%;
+  color: white;
+}
+.about .btn{
+  padding: 8px 18px;
+  background-color: #62EA5F;
+  color: white;
+  border-radius: 20px;
+  width: max-content;
+}
+
+/* Services */
+.services{
+  border: 1px solid pink;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+}
+.services h2{
+  margin:0 auto;
+}
+.services img{
+  width: 20%;
+}
+.items__one,.items__two{
+  border: 1px solid red;
+  display: flex;
+  gap: 50px;
+}
+.items__one{
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.services__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: red;
+  border-radius: 25px;
+  padding: 25px 15px;
+}
+.services__item h3{
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+.services__item p{
+  text-align: center;
+}
+.history{
+  border: 1px solid yellow;
+}
+.history img{
+  width: 25%;
+  padding: 5px;
+}
+.history h2{
+  margin-bottom: 0;
+  font-size: 30px;
+}
+.history p{
+  margin-top: 2px;
+  font-size: 20px;
+}
