@@ -1,7 +1,9 @@
 body{
   padding: 0;
   margin: 0;
-  background-color: gray;
+  background: linear-gradient(100deg, rgb(69, 143, 67) 35%, rgba(238,170,85,1) 100%);
+  font-family: 'Poppins';
+  padding: 30px 10vw;
 }
 a{
   text-decoration: none;
@@ -12,7 +14,6 @@ li{
 }
 
 .navigation{
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,6 +25,7 @@ li{
 .navigation .logo{
   display: flex;
   align-items: center;
+  font-size: 25px;
 }
 .list{
   display: flex;
@@ -32,19 +34,24 @@ li{
 }
 .item__list a{
   padding: 20px;
+  font-weight: 700;
+  font-size: 20px;
 }
 .navigation .btn{
   padding: 8px 18px;
   background-color: #62EA5F;
-  color: white;
   border-radius: 20px;
 }
+.btn a, .navigation span{
+  color: #444b74;
+  font-weight: 900;
+}
+
 /* Hero */
 .hero{
-  border: 1px solid blue;
+  padding: 30px 5vw;
 }
 .top{
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,19 +60,18 @@ li{
   width: 25%;
 }
 .top .left, .top .right{
+  color: white;
   width: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
+  justify-content: flex-end;
 }
 .right span{
   transform: rotateZ(90deg);
-  letter-spacing: 2px;
+  letter-spacing: 10px;
   text-transform: uppercase;
 }
 .bottom {
-  border: 1px solid yellow;
   display: flex;
   flex-direction: column;
 }
@@ -73,16 +79,24 @@ li{
   font-size: 100px;
   margin-bottom: 0;
   text-align: center;
+  font-size: 10vw;
+  margin-top: 0;
+  background: -webkit-linear-gradient(rgb(37, 255, 37), rgb(255, 252, 59));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .bottom span{
   font-size: 25px;
   text-align: center;
+  margin-top: -35px;
+  color: white;
 }
 
 /* About */
 .about{
-  border: 1px solid black;
   display: flex;
+  justify-content: center;
+  padding: 5vw 0;
 }
 .tiktik{
   width: 130px;
@@ -114,20 +128,20 @@ li{
 
 /* Services */
 .services{
-  border: 1px solid pink;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   color: white;
+  padding: 30px 5vw;
 }
 .services h2{
   margin:0 auto;
+  font-size: 30px;
 }
 .services img{
   width: 20%;
 }
 .items__one,.items__two{
-  border: 1px solid red;
   display: flex;
   gap: 50px;
 }
@@ -142,6 +156,8 @@ li{
   background: red;
   border-radius: 25px;
   padding: 25px 15px;
+  background: linear-gradient(-100deg, rgba(83,190,81,1) 35%, rgba(238,170,85,1) 100%);
+  box-shadow: 0px 0px 18px -4px rgba(62,62,62,.7);
 }
 .services__item h3{
   margin-bottom: 0;
@@ -149,19 +165,84 @@ li{
 }
 .services__item p{
   text-align: center;
+  color: #4A0C0C;
+  font-size: 15px;
+  word-spacing: 0px;
 }
+
+/* History */
 .history{
-  border: 1px solid yellow;
+}
+.history__center{
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+}
+.images{
+  width: max-content;
+}
+.history .images img{
+  width: 250px;
+  padding: 5px;
+  border-radius: 20px;
 }
 .history img{
-  width: 25%;
+  width: 40px;
   padding: 5px;
 }
 .history h2{
   margin-bottom: 0;
-  font-size: 30px;
+  font-size: 35px;
+  color: white;
 }
 .history p{
   margin-top: 2px;
   font-size: 20px;
+  color: #FBFF22;
+}
+.awards{
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  background: linear-gradient(-90deg, rgba(83,190,81,1) 35%, rgba(238,170,85,1) 100%);
+  margin: 0 auto;
+  border-radius: 30px;
+  padding: 15px 20px;
+}
+.award{
+  width: 100%;
+  padding-left: 20px;
+}
+.award:nth-child(2),.award:nth-child(3){
+  border-left: 1px solid white;
+}
+.award h3{
+  margin: 0;
+  color: white;
+}
+.history .logo{
+  width: 40px;
+  display: flex;
+  margin: 60px auto;
+}
+
+/* Footer */
+.footer{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10vw;
+  color: white;
+}
+.container{
+  display: flex;
+}
+.footer__right img{
+  width: 35px;
+}
+.footer__right ul{
+  display: flex;
+  gap:25px
+}
+.footer h5{
+  text-align: center;
 }
