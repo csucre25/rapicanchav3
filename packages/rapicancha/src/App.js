@@ -12,9 +12,9 @@ class App extends React.Component{
   render() {
     const routes = [
       { name: 'Home', url: '/' },
-      { name: 'Team', url: '/team' },
-      { name: 'Features', url: '/features' },
-      { name: 'Contact', url: '/contact' }
+      { name: 'About', url: '#About__content' },
+      { name: 'Services', url: '#Services__content' },
+      { name: 'Portfolio', url: '#Portfolio__content' }
     ];
 
     return (

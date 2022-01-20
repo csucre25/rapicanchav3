@@ -1,8 +1,8 @@
 import React from "react";
-import './about.scss';
+import './login.scss';
 import titikTitik from '../../../images/titikTitik.png';
 
-class About extends React.Component  {
+class Login extends React.Component  {
     render() {return (
         <section className="about"  id="About__content">
             <div className="left">
@@ -24,4 +24,4 @@ class About extends React.Component  {
     }
 }
 
-export default About;
+export default Login;

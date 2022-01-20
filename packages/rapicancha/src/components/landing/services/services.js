@@ -4,7 +4,7 @@ import laptop from '../../../images/laptop.png';
 
 class Services extends React.Component  {
     render() {return (
-        <section className="services">
+        <section className="services"  id="Services__content">
             <h2>El mejor servicio</h2>
             <div className="items__one">
             <div className="services__item">

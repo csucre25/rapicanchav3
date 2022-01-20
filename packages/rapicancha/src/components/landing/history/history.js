@@ -12,7 +12,7 @@ import ball from '../../../images/ball.png';
 
 class History extends React.Component  {
     render() {return (
-        <section className="history">
+        <section className="history" id="Portfolio__content">
           <div className="history__center">
             <div>
               <h2>Revise nuestras historias</h2>
