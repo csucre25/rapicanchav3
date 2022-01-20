@@ -1,6 +1,6 @@
 import React from "react";
 import './header.scss';
-import ball from '../../images/ball.png';
+import ball from '../../../images/ball.png';
 import Navbar from "../navbar/navbar";
 
 class Header extends React.Component {
