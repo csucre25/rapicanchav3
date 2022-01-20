@@ -1,0 +1,23 @@
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navigation img{
+    width: 30px;
+    padding-right:5px ;
+  }
+  .navigation .logo{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+  }
+  .navigation .btn{
+    padding: 8px 18px;
+    background-color: #62EA5F;
+    border-radius: 20px;
+  }
+  .btn a, .navigation span{
+    color: #444b74;
+    font-weight: 900;
+  }
