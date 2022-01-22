@@ -5,6 +5,7 @@ import Banner from './components/landing/banner/banner';
 import About from './components/landing/about/about';
 import History from './components/landing/history/history';
 import Services from './components/landing/services/services';
+import Login from './components/login/login';
 //import logo from './logo.svg';
 import './App.css';
 
@@ -24,6 +25,7 @@ class App extends React.Component{
       <About/>
       <Services/>
       <History/>
+      <Login/>
       <Footer />
     </div>
   );
