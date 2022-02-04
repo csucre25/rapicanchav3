@@ -8,6 +8,7 @@ import Services from './components/landing/services/services';
 import Login from './components/login/login';
 //import logo from './logo.svg';
 import './App.css';
+import Sing from './components/Singup/Sing';
 
 class App extends React.Component{
   render() {
@@ -25,11 +26,11 @@ class App extends React.Component{
       <About/>
       <Services/>
       <History/>
-      <Login/>
+      <Sing/>
       <Footer />
     </div>
   );
-}}
+  }
+}
   
-
 export default App;
