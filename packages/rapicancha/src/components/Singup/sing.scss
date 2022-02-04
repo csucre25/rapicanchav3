@@ -1,4 +1,106 @@
 .derecha_info{
-    text-align: right;
-    
+    margin:10px 20px 20px 10px;
 }
+.info-usuario{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+body {
+    margin:0px;
+    font-family: 'Ubuntu', sans-serif;
+      background-size: 100% 110%;
+  }
+  h1, h2, h3, h4, h5, h6, a {
+    margin:0; padding:0;
+    text-align: center;
+  }
+  .logo-f{
+      display:flex;
+      justify-content:center;
+      align-items:space-between;
+  }
+  img{
+      margin:20px;
+  }
+  .login {
+    margin:0 auto;
+    max-width:500px;
+  }
+  .login-header {
+    color:#fff;
+    text-align:center;
+    font-size:300%;
+  }
+  /* .login-header h1 {
+     text-shadow: 0px 5px 15px #000; */
+  
+  .login-form {
+    border:.5px solid #fff;
+    background-image: '../../images/imagenfutbol.jpg';
+    border-radius:10px;
+    box-shadow:0px 0px 10px #000;
+  }
+  .login-form h3 {
+    text-align:left;
+    margin-left:40px;
+    color:#fff;
+  }
+  .login-form {
+    box-sizing:border-box;
+    padding-top:15px;
+      padding-bottom:10%;
+    margin:15% auto;
+    width: auto;
+    
+    text-align:center;
+  }
+.info-usuario input[type="text"] ,input[type="password"]{
+      height: 10px;
+      width: 200px;
+    font-family: 'Ubuntu', sans-serif;
+    margin:20px;
+    margin:10px 20px 30px 10px;
+    border-radius:5px;
+    border:2px solid #f2f2f2;
+    outline:none;
+    padding:10px;
+    border: 10px;
+  }
+  .login-form input[type="button"] {
+    height:30px;
+    width:200px;
+    background:#fff;
+    border:1px solid #f2f2f2;
+    border-radius:20px;
+    color: slategrey;
+    text-transform:uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    cursor:pointer;
+  }
+  .sign-up{
+    color:#f2f2f2;
+    margin-left:-70%;
+    cursor:pointer;
+    text-decoration:underline;
+  }
+  .no-access {
+    color:darkblue;
+   margin:20px;
+    text-decoration:underline;
+      text-align:center;
+  }
+  .try-again {
+    color:#f2f2f2;
+    text-decoration:underline;
+    cursor:pointer;
+  }
+  .button-no-border{
+    margin-bottom:20px;
+    margin-top:20px;
+    border:transparent;
+  }
+  
+ 
