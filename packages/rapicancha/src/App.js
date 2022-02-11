@@ -5,32 +5,48 @@ import Banner from './components/landing/banner/banner';
 import About from './components/landing/about/about';
 import History from './components/landing/history/history';
 import Services from './components/landing/services/services';
-import Login from './components/login/login';
+import Login from './components/landing/about/login/login';
+import Home from '../src/components/utils/Home/Home';
 //import logo from './logo.svg';
 import './App.css';
 import Sing from './components/Singup/Sing';
+import { Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
-class App extends React.Component{
-  render() {
-    const routes = [
-      { name: 'Home', url: '/' },
-      { name: 'About', url: '#About__content' },
-      { name: 'Services', url: '#Services__content' },
-      { name: 'Portfolio', url: '#Portfolio__content' }
-    ];
 
-    return (
+export const UserContext = React.createContext(undefined);
+export const RouteContext = React.createContext({});
+export const ThemeContext = React.createContext(undefined);
+
+const App = () =>  {
+
+  const routes = [
+    { name: 'Home', url: '/' },
+    { name: 'About', url: '#About__content' },
+    { name: 'Services', url: '#Services__content' },
+    { name: 'Portfolio', url: '#Portfolio__content' }
+  ];
+
+  return (
+
     <div className="App">
+      
       <Header company='Peloteros' routes={routes} />
-      <Banner/>
-      <About/>
-      <Services/>
-      <History/>
-      <Sing/>
-      <Footer />
+      <Banner />
+        <About />
+        <Services />
+        <History />
+        <Footer />
+        <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='login' element={<Login />} />
+        <Route path='sing' element={<Sing />} />
+      </Routes>
     </div>
+
   );
-  }
 }
-  
+
 export default App;
+
+

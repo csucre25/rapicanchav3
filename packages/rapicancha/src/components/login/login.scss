@@ -1,6 +1,5 @@
 
 body {
-
   margin:0px;
   font-family: 'Ubuntu', sans-serif;
 	background-size: 100% 110%;
@@ -51,8 +50,8 @@ img{
 }
 .login input[type="text"],
 .login input[type="password"] {
-  max-width:400px;
-	width: 80%;
+  max-width:800px;
+	width: 100%;
   line-height:3em;
   font-family: 'Ubuntu', sans-serif;
   margin:1em 2em;
@@ -63,7 +62,7 @@ img{
 }
 .login-form input[type="button"] {
   height:30px;
-  width:100px;
+  width:200px;
   background:#fff;
   border:1px solid #f2f2f2;
   border-radius:20px;
@@ -79,7 +78,7 @@ img{
   text-decoration:underline;
 }
 .no-access {
-  color:#E86850;
+  color:darkblue;
  margin:20px;
   text-decoration:underline;
 	text-align:center;
