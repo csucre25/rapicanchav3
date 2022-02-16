@@ -1,0 +1,33 @@
+/* About */
+.about{
+  display: flex;
+  justify-content: center;
+  padding: 5vw 0;
+}
+.tiktik{
+  width: 130px;
+}
+.tiktik:nth-child(1){
+  align-self: flex-start;
+}
+.tiktik:nth-child(2){
+  align-self: flex-end;
+}
+.left{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.rigth{
+  width: 40%;
+  color: white;
+}
+.about .btn{
+  padding: 8px 18px;
+  background-color: #62EA5F;
+  color: white;
+  border-radius: 20px;
+  width: max-content;
+}

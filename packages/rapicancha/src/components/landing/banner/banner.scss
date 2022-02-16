@@ -1,0 +1,44 @@
+/* Hero */
+.hero{
+  padding: 30px 5vw;
+}
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top img{
+  width: 25%;
+}
+.top .left, .top .right{
+  color: white;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.right span{
+  transform: rotateZ(90deg);
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+.bottom {
+  display: flex;
+  flex-direction: column;
+}
+.bottom h1{
+  font-size: 100px;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 10vw;
+  margin-top: 0;
+  background: -webkit-linear-gradient(rgb(37, 255, 37), rgb(255, 252, 59));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bottom span{
+  font-size: 25px;
+  text-align: center;
+  margin-top: -35px;
+  color: white;
+}
