@@ -20,7 +20,7 @@ class About extends React.Component {
                         Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.
                         Maecenas eget condimentum velit, sit amet feugiat lectus. </p>
                     <div className="btn">
-                        <a >Buscar Cancha</a>
+                    <Link to={'/login'}>Buscar Cancha</Link>
                     </div>
   
                 </div>
@@ -35,7 +35,7 @@ class About extends React.Component {
                         Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.
                         Maecenas eget condimentum velit, sit amet feugiat lectus. </p>
                     <div className="btn">
-                        <a href="#">Buscar Cancha</a>
+                    <Link to={'/login'}>Buscar Cancha</Link>
                     </div>
   
                 </div>

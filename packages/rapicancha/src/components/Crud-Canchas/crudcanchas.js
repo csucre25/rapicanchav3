@@ -8,13 +8,13 @@ const dias = {
     jueves: 'john.doe@gmail.com',
     viernes: true,
     sabado:'',
-    domingo=''
+    domingo :''
 }
 
 const crudcanchas = () =>  {
   
     return (
-        <div>
+        <div className='crudcanchas'>
             <p>desde crud de crudcanchas</p>
         </div>
     );

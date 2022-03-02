@@ -2,8 +2,11 @@ import React from "react";
 import './header.scss';
 import ball from '../../../images/ball.png';
 import Navbar from "../navbar/navbar";
+import {Link} from 'react-router-dom';
+
 
 class Header extends React.Component {
+  //<a href="#">Buscar Cancha</a>
   render() {
     const company = this.props.company;
     const routes = this.props.routes;
@@ -16,7 +19,8 @@ class Header extends React.Component {
                 </div>                
                 <Navbar routes={routes} />
                 <div className="btn">
-                    <a href="#">Buscar Cancha</a>
+                  <Link to={'/login'}>Buscar Cancha</Link>
+                    
                 </div>
             </nav>
         </div>
