@@ -1,7 +1,6 @@
 import React from "react";
 import './sing.scss';
-
-
+import { Link } from 'react-router-dom';
 
 class Sing extends React.Component {
 
@@ -18,7 +17,7 @@ class Sing extends React.Component {
                     <img src={"https://www.doplerweb.com/data/fotos/1022008841_1_twitter-bird-white-on-blue1.jpg"} alt="50" width="50"></img>
                 </div>
                 <br />
-                <h2 class="forgot-password">o registrese con tu email</h2>
+                <h2 class="letra">o registrese con su email</h2>
                 <div className="info-usuario">
                     <div >
                         <h3 class="derecha_info">Correo electronico</h3><br />
@@ -42,7 +41,9 @@ class Sing extends React.Component {
                 <input type="button" value="Registrarse" class="registrase-button" />
                 <br />
                 <h4 class="no-access">¿Ya tiene una cuenta?</h4>
-                <input type="button" value="Ingresar" class="ingresar-button" />
+                <div className="btn">
+                    <Link to={'/login'} className='link'>Ingresar</Link>
+                </div>
                 <br />
 
             </div>

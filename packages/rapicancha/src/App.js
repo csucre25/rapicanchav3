@@ -1,11 +1,5 @@
-import React from 'react';
-import Footer from './components/utils/footer/footer';
-import Header from './components/utils/header/header';
-import Banner from './components/landing/banner/banner';
-import About from './components/landing/about/about';
-import History from './components/landing/history/history';
-import Services from './components/landing/services/services';
-import Login from './components/landing/about/login/login';
+import React, { useState, useEffect } from 'react';
+import Login from './components/login/login';
 import Home from './components/Home/Home';
 //import logo from './logo.svg';
 import './App.css';
@@ -23,6 +17,9 @@ export const UserContext = React.createContext(undefined);
 export const RouteContext = React.createContext({});
 export const ThemeContext = React.createContext(undefined);
 
+const mockUser = {
+  isOwner: false
+}
 const App = () =>  {
 
   /*const routes = [
@@ -34,11 +31,21 @@ const App = () =>  {
   //        <Route path='listarlozas' element={<ListarLozas />} />
   //<Route path='updateperfil' element={<UpdateDueño />} />
   //<Route path='listaclientes' element={<ListasClientes />} />
+  
+  const [user, setUser] = useState(mockUser);
+  //const [theme, setTheme] = useState('dark');
+
+  useEffect(() => {
+      localStorage.setItem('user', JSON.stringify(user));
+      localStorage.setItem('token', user.token);
+  }, [user]); 
 
   return (
+    
 
     <div className="App">
-        <Routes>
+       <UserContext.Provider value={{user, setUser}}>
+       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='login' element={<Login />} />
         <Route path='sing' element={<Sing />} />
@@ -48,7 +55,9 @@ const App = () =>  {
         <Route path='perfiljugador' element={<PerfilJugador />} />
         
       </Routes>
-    </div>
+    
+       </UserContext.Provider>
+       </div>    
 
   );
 }

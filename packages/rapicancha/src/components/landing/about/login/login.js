@@ -1,6 +1,14 @@
-import React from "react";
+/*import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-const login =() => {
+import { UserContext } from './';
+
+const Login = () => {
+    const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+    const { user, setUser } = useContext(UserContext);
+    const validateForm = () => {
+        return email.length > 0 && password.length > 0;
+      }
         return(
 
             <div className="login-form">
@@ -13,12 +21,16 @@ const login =() => {
                        <img src={"https://www.doplerweb.com/data/fotos/1022008841_1_twitter-bird-white-on-blue1.jpg"} alt="50" width="50"></img>
                    </div><br/>
                    <h2 class="forgot-password">o ingresa con tu email</h2>
-                   <input type="text" placeholder="example@gmail.com" /><br /><br/>
+                   <input type="email" placeholder="example@gmail.com"  required
+                   onChange={ e =>setEmail(e.target.value)}
+                   /><br /><br/>
                    <h2>Contraseña:</h2>
-                   <input type="password" placeholder="Contraseña" />
+                   <input type="password" placeholder="Contraseña"  required 
+                   onChange={ e => setPassword(e.target.value)}/>
                    <br/><br/>
-                   <div className="btn">
-                    <Link to={'/usuario'}>Ingresar</Link>
+                   <p>validateForm: {validateForm()} { validateForm() ? 'It looks good!' : 'Please fill complete'}</p>
+                   <div className="btn" >
+                    <Link to={'/usuario'} disabled={ !validateForm()}>Ingresar</Link>
                     </div>
                    <br />
                    <h4 class="no-access">¿No tienes una cuenta?</h4>
@@ -39,4 +51,4 @@ const login =() => {
 }
 
 
-export default login;
+export default Login;*/
