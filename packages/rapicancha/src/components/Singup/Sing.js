@@ -7,11 +7,11 @@ class Sing extends React.Component {
     render() {
 
         return (
-            <div className="login-form">
-                <div className="login-header">
+            <div className="sing-form">
+                <div className="sing-header">
                     <h1>Registrarse</h1>
                 </div>
-                <div className="logo-f">
+                <div className="logo-s">
                     <img className="logo1" src={"https://images.vexels.com/media/users/3/137253/isolated/lists/90dd9f12fdd1eefb8c8976903944c026-logotipo-del-icono-de-facebook.png"} alt="50px"
                         height="50px"></img>
                     <img src={"https://www.doplerweb.com/data/fotos/1022008841_1_twitter-bird-white-on-blue1.jpg"} alt="50" width="50"></img>
@@ -41,7 +41,7 @@ class Sing extends React.Component {
                 <input type="button" value="Registrarse" class="registrase-button" />
                 <br />
                 <h4 class="no-access">¿Ya tiene una cuenta?</h4>
-                <div className="btn">
+                <div className="btn-d">
                     <Link to={'/login'} className='link'>Ingresar</Link>
                 </div>
                 <br />

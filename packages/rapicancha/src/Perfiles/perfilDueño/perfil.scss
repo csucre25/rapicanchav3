@@ -1,0 +1,19 @@
+.perfil-dueño{
+    .header-dueño{
+        h1{
+            color: white;
+            font-size: 20px;
+        }
+    }
+    .body-dueño{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        .btn-dueño{
+            width: 50%;
+            background-color: olivedrab;
+            text-align: center;
+            color: white;
+        }
+    }
+}

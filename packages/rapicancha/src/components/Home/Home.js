@@ -5,7 +5,7 @@ import Services from '../landing/services/services';
 import History from '../landing/history/history';
 import Footer from '../utils/footer/footer';
 import Header from '../utils/header/header';
-import '../Home/home.scss'
+//import '../Home/home.scss'
 
 const Home = () =>  {
   const routes = [

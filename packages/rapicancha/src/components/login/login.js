@@ -12,7 +12,7 @@ const Login = () => {
     }
     return (
         <div className='login'>
-            <div className="login-form">
+            <div className="login-form1">
                 <div className="login-header">
                     <h1>Iniciar Sesion</h1>
                 </div>

@@ -1,8 +1,8 @@
-/*.App {
+.App {
   /*text-align: center;*/
-/*}
+}
 
-/*.App-logo {
+.App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -43,4 +43,4 @@ body{
   background: linear-gradient(100deg, rgb(69, 143, 67) 35%, rgba(238,170,85,1) 100%);
   /*font-family: 'Poppins';*/
   /*padding: 30px 10vw;*/
-/*}*/
+}
