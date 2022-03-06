@@ -66,28 +66,24 @@ let updateUsuario = async(req, res) => {
     }
 };
 
-let deleteUsuario = async(req, res) => {
+let loginUsuario = async(req, res) => {
+    let manager = req.params.manager;
     let body = req.body;
-    let _persona_id = body.persona_id;
-    await models.sequelize.transaction(async(t) => {
-        let personaObject = await models.persona.requestFindById(t, _persona_id)
-        if (personaObject.hasOwnProperty('error_id')) {
-            return res.status(500).json("error ha implementar");
-        }
-        let personaUpdate = await models.persona.requestDelete(t, personaObject)
-        if (personaUpdate.hasOwnProperty('error_id')) {
-            return res.status(500).json("error ha implementar");
-        }
-        let usuarioObject = await models.usuario.requestFindOne(t, { persona_id: _persona_id })
-        if (usuarioObject.hasOwnProperty('error_id')) {
-            return res.status(500).json("error ha implementar");
-        }
-        let usuarioUpdate = await models.usuario.requestDelete(t, usuarioObject)
-        if (usuarioUpdate.hasOwnProperty('error_id')) {
-            return res.status(500).json("error ha implementar");
-        }
-        return res.status(200).json({ respuesta: "Eliminacion exitosa", controlador: "persona", operacion: "deletePersona", registro: personaUpdate });
-    });
+    let usuarioLogin = {
+        correo: body.correo,
+        passw: body.password
+    }
+    try {
+        const validation = await schemaLogin.validateAsync(usuarioLogin);
+        const usuarios = await Usuario.findOne(usuarioLogin);
+        //console.log(usuarios);
+        if(usuarios == null)
+            return res.status(404).json({ respuesta: "Error", controlador: "Usuario", operacion: manager, error: 'Usuario not found' });
+        return res.status(200).json({ respuesta: "Login exitoso", controlador: "Usuario", operacion: manager, usuarios: usuarios });
+    }
+    catch (err) {
+        return res.status(400).json({ respuesta: "Error", controlador: "Usuario", operacion: manager, error: err });
+    }
 };
 
 let getUsuario = async(req, res) => {
@@ -102,9 +98,10 @@ let getUsuario = async(req, res) => {
         correo: body.correo
     }
     try {
-        const value = await schema.validateAsync(usuario);
+        const validation = await schema.validateAsync(usuario);
         const usuarios = await Usuario.find();
-        console.log(usuarios);
+        if(usuarios == null)
+            return res.status(404).json({ respuesta: "Error", controlador: "Usuario", operacion: manager, error: 'Usuarios not found' });
         return res.status(200).json({ respuesta: "Creacion exitosa", controlador: "Usuario", operacion: manager, usuarios: usuarios });
     }
     catch (err) {
@@ -140,3 +137,11 @@ const schema = Joi.object({
 .with('correo','nombre')
 //.xor('password','access_token')
 .with('password','repeat_password');
+
+const schemaLogin = Joi.object({
+    passw: Joi.string()
+        .pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')),
+    correo: Joi.string()
+        .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required()
+})
+.with('correo','passw');

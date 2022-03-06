@@ -1,7 +1,9 @@
 'use strict';
 const mongoose = require('mongoose');
 const url = 'mongodb://localhost/rapicancha';
-mongoose.connect(url,{})
+mongoose.connect(url,{ 
+  //Parameters - opcional
+})
 .then(()=>console.log('Connection to DB success'))
 .catch((err)=>console.log('Error Message: '+err))
 
