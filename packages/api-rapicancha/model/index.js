@@ -1,5 +1,16 @@
 'use strict';
-require('dotenv').config()
+const mongoose = require('mongoose');
+const url = 'mongodb://localhost/rapicancha';
+mongoose.connect(url,{})
+.then(()=>console.log('Connection to DB success'))
+.catch((err)=>console.log('Error Message: '+err))
+
+//require('dotenv').config()
+/*const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const mySchema = Schema({ name: String });
+const uri = 'mongodb://localhost/mongoose-shared-connection';
+global.db = mongoose.createConnection(uri);
 
 const fs = require('fs');
 const path = require('path');
@@ -39,4 +50,4 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-module.exports = db;
+module.exports = db;*/

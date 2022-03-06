@@ -2,7 +2,7 @@
 
 //require('dotenv').config();
 
-var models = require('../models');
+var models = require('../model');
 
 exports.manageLosa = async(req, res) => {
     var manager = req.params.manager;
@@ -16,7 +16,7 @@ exports.manageLosa = async(req, res) => {
         case 'eliminar_losa':
             return deletePersona(req, res);
         default:
-            return res.status(404).send("option not found");
+            return res.status(404).send("option not found"+manager);
     }
 };
 
