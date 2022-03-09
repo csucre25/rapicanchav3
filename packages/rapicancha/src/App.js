@@ -9,7 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 //componentes dueño
 import PerfilDueno from './Perfiles/perfilDueño/perfilDueño';
 import PerfilJugador from './Perfiles/perfilJugador/perfilJugador';
-
+import MyProvider from './components/application/provider';
 
 
 
@@ -22,16 +22,6 @@ const mockUser = {
 }
 const App = () =>  {
 
-  /*const routes = [
-    { name: 'Home', url: '/' },
-    { name: 'About', url: '#About__content' },
-    { name: 'Services', url: '#Services__content' },
-    { name: 'Portfolio', url: '#Portfolio__content' }
-  ];*/
-  //        <Route path='listarlozas' element={<ListarLozas />} />
-  //<Route path='updateperfil' element={<UpdateDueño />} />
-  //<Route path='listaclientes' element={<ListasClientes />} />
-  
   const [user, setUser] = useState(mockUser);
   //const [theme, setTheme] = useState('dark');
 
@@ -44,19 +34,18 @@ const App = () =>  {
     
 
     <div className="App">
-       <UserContext.Provider value={{user, setUser}}>
+       <MyProvider>
        <Routes>
         <Route path='/' element={<Home />} />
         <Route path='login' element={<Login />} />
         <Route path='sing' element={<Sing />} />
         <Route path='perfildueno' element={<PerfilDueno />} />
-
-
         <Route path='perfiljugador' element={<PerfilJugador />} />
         
       </Routes>
+       </MyProvider>
+       
     
-       </UserContext.Provider>
        </div>    
 
   );

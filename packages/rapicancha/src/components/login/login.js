@@ -1,15 +1,34 @@
-import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
-//import { UserContext } from '../App';
+import React, { useState,useRef, useContext } from 'react';
+import { Link} from 'react-router-dom';
+
+import { AppContext } from '../application/provider';
 import '../login/login.scss';
 
 const Login = () => {
-    const [email, setEmail] = useState('');
+    const [correo, setCorreo] = useState('');
     const [password, setPassword] = useState('');
     // const { user, setUser } = useContext(UserContext);
+   let email=useRef(null);
+   let contraseña=useRef(null);
+
+   const [state, setState] = useContext(AppContext);
     const validateForm = () => {
         return email.length > 0 && password.length > 0;
     }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const credentials = { correo, password };
+        fetch('http://localhost:3001/usuario/ingresar_usuario', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json'},
+          body: JSON.stringify(credentials)
+        })
+          .then(response => response.json())
+          .then(res => {
+            setState(res.data);
+          });
+      }
     return (
         <div className='login'>
             <div className="login-form1">
@@ -23,17 +42,14 @@ const Login = () => {
                 </div><br />
 
                 <h2 class="forgot-password">o ingresa con tu email</h2>
-                <input type="text" className='email' placeholder="example@gmail.com" required
-                    onChange={e => setEmail(e.target.value)}
-                /><br /><br />
+                <input type="text" className='email' placeholder="example@gmail.com" ref={email} onChange={() =>{setState({...state,correo:email.current.value})}} /><br /><br />
                 <h2>Contraseña:</h2>
-                <input type="text" className='password' placeholder="Contraseña" required
-                    onChange={e => setPassword(e.target.value)} />
+                <input type="password" className='password' placeholder="Contraseña" ref={contraseña} onChange={()=>{setState({...state,password:contraseña.current.value})}} />
                 <br /><br />
                 <p>validateForm: {validateForm()} {validateForm() ? 'It looks good!' : 'Please fill form'}</p>
                 
                 <div className="btn" >
-                    <Link to={'/usuario'} disabled={!validateForm()} className='link'>Ingresar</Link>
+                    <Link to={'/perfiljugador'} disabled={!validateForm()} onClick={handleSubmit} className='link'>Ingresar</Link>
                 </div>
                 <br />
                 <h4 class="no-access">¿No tienes una cuenta?</h4>
