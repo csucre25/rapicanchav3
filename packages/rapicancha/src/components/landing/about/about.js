@@ -1,10 +1,7 @@
 import React from "react";
 import './about.scss';
 import titikTitik from '../../../images/titikTitik.png';
-import { Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Login from "./login/login";
-
 class About extends React.Component {
     render() {
         return (
@@ -21,8 +18,7 @@ class About extends React.Component {
                         Maecenas eget condimentum velit, sit amet feugiat lectus. </p>
                     <div className="btn">
                     <Link to={'/login'}>Buscar Cancha</Link>
-                    </div>
-  
+                    </div> 
                 </div>
                  <section className="about" id="About__content">
                 <div className="left">
@@ -37,21 +33,11 @@ class About extends React.Component {
                     <div className="btn">
                     <Link to={'/login'}>Buscar Cancha</Link>
                     </div>
-  
                 </div>
-      
-      
             </section>
-                
             </section>
-            </>
-               
-            
-
-
-            
+            </>           
         );
     }
 }
-
 export default About;

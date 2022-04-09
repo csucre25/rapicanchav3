@@ -1,22 +1,20 @@
-/* Footer */
-  .footer{
-    display: flex;
-    flex-direction: column;
-    padding: 10px 10vw;
-    color: white;
-    /*position: fixed;*/
-    bottom: 0;
-  }
-  .container{
-    display: flex;
-  }
-  .footer__right img{
-    width: 35px;
-  }
-  .footer__right ul{
-    display: flex;
-    gap:25px
-  }
-  .footer h5{
-    text-align: center;
-  }
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10vw;
+  color: white;
+  bottom: 0;
+}
+.container {
+  display: flex;
+}
+.footer__right img {
+  width: 35px;
+}
+.footer__right ul {
+  display: flex;
+  gap: 25px;
+}
+.footer h5 {
+  text-align: center;
+}

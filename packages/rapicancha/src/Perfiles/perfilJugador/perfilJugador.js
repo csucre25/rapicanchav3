@@ -1,11 +1,8 @@
 import React, { useContext } from "react";
 import './perfil.scss';
-import { Link } from 'react-router-dom';
 import { AppContext } from "../../components/application/provider";
 const PerfilJugador = () => {
-
     const [state, setState] = useContext(AppContext);
-
     return (
         <div className="jugador">
             <div className="perfil-jugador">
@@ -15,7 +12,6 @@ const PerfilJugador = () => {
                     <p>{state.correo}</p>
                 </div>
                 <div className="btn">Modificar Perfil</div>
-
             </div>
             <div className="buscar-cancha">
                 <h1>Busqueda de Canchas deportivas</h1>
@@ -25,14 +21,8 @@ const PerfilJugador = () => {
                     <button className="buscar-btn">Buscar</button>
                 </div>
                 <button className="btn-salir">Salir</button>
-
             </div>
         </div>
-
-
     );
-
 }
-
-
 export default PerfilJugador;

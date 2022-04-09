@@ -1,11 +1,8 @@
 import React from "react";
 import './sing.scss';
 import { Link } from 'react-router-dom';
-
 class Sing extends React.Component {
-
     render() {
-
         return (
             <div className="sing-form">
                 <div className="sing-header">
@@ -28,7 +25,7 @@ class Sing extends React.Component {
                         <h3 class="derecha_info">Repita contraseña</h3>
                     </div>
                     <div>
-                        <input type="text" placeholder="example@gmail.com" /><br/>
+                        <input type="text" placeholder="example@gmail.com" /><br />
                         <input type="text" placeholder="Juan Antonio" /><br />
                         <input type="text" placeholder="Del Solar" /><br />
                         <input type="text" placeholder="999 999 999" /><br />
@@ -36,7 +33,6 @@ class Sing extends React.Component {
                         <br />
                         <input type="text" placeholder="Contraseña" /><br />
                     </div>
-
                 </div>
                 <input type="button" value="Registrarse" class="registrase-button" />
                 <br />
@@ -45,12 +41,8 @@ class Sing extends React.Component {
                     <Link to={'/login'} className='link'>Ingresar</Link>
                 </div>
                 <br />
-
             </div>
-
-
         );
     }
 }
-
 export default Sing;
